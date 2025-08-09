@@ -1,0 +1,33 @@
+{
+  "type": "record",
+  "name": "UserSignup",
+  "namespace": "com.example.events",
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "int"
+    },
+    {
+      "name": "email",
+      "type": "string"
+    },
+    {
+      "name": "plan",
+      "type": [
+        "null",
+        {
+          "type": "string",
+          "avro.java.string": "String"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "timestamp",
+      "type": {
+        "type": "string",
+        "logicalType": "timestamp-millis"
+      }
+    }
+  ]
+}
